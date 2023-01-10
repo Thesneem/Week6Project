@@ -1,0 +1,43 @@
+<section>
+  <div class="container">
+    <div class="row mt-3 col-md-2">
+      <a href="/admin/add-users" class="btn btn-success ml-auto">Add User</a>
+    </div>
+    <table class="table mt-2" id="usertable">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Access</th>
+          <th>Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each users}}
+          <tr>
+            <td>{{this.firstname}} {{this.lastname}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.access}}</td>
+            <td>
+              <a
+                href="/admin/edit-users/{{this._id}}"
+                class="btn btn-danger"
+              >Edit User</a>
+              <a
+                href="/admin/delete-user/{{this._id}}"
+                class="btn btn-primary"
+                onclick="return confirm ('Do you want to delete the user {{this.firstname}} {{this.lastname}}?')"
+              >Delete</a>
+            </td>
+
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+
+  </div>
+</section>
+
+<script>
+  $(document).ready(function () { $("#usertable").DataTable(); } );
+</script>

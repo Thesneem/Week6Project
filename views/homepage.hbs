@@ -1,0 +1,35 @@
+
+{{!-- <hi>Hello Welcome {{user.firstname}}</hi>
+<br>
+<a class="btn btn-primary btn-sm" href="/logout">Logout</a> --}}
+
+<nav class="navbar bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand"><h1>Welcome</h1></a>
+    <form class="d-flex" role="search">
+      {{!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> --}}
+      <a class="btn btn-primary btn-sm" href="/logout">Logout</a>
+      {{!-- <button class="btn btn-outline-success" type="submit">Search</button> --}}
+    </form>
+  </div>
+</nav>
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+              <h2>Let's work together for a better future!</h2>
+              <img class="overflow-none img-fluid max-width-100%" src="https://media.architecturaldigest.com/photos/56b524de4ac3d842677b9ac0/master/w_2323,h_1548,c_limit/home-office-01.jpg" alt="image1">
+                <p class="text-dark mt-3 px-2">
+Say hello to the next level office spaces. High performance made posiible when you deeply integrate every corner of your working space with the required furniture that help in providing you better office environment. Here we bring you best-of-best environment to make the co-working easier and merrier.</p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+				//avoiding form resubmission
+		if ( window.history.replaceState ) {
+			window.history.replaceState( null, null, window.location.href );
+		}
+	</script>
